@@ -1,0 +1,245 @@
+{
+  "editor.fontSize": 22,
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.fontSize": 18,
+  "editor.mouseWheelZoom": true,
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "on",
+  "editor.fontFamily": "JetBrains Mono",
+  "workbench.tree.renderIndentGuides": "none",
+  "files.insertFinalNewline": true,
+  "extensions.ignoreRecommendations": true,
+  "window.title": " ",
+
+  "workbench.sideBar.location": "right",
+  "workbench.list.fastScrollSensitivity": 5,
+  "workbench.startupEditor": "none",
+  "editor.guides.indentation": false,
+  "editor.renderWhitespace": "none",
+  "editor.renderLineHighlight": "none",
+  "editor.lightbulb.enabled": "off",
+  // "editor.hover.enabled": false,
+  "editor.showFoldingControls": "never",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "explorer.confirmDragAndDrop": true,
+  "explorer.compactFolders": false,
+  "terminal.integrated.tabs.enabled": false,
+  "workbench.colorCustomizations": {
+    "editorSuggestWidget.selectedBackground": "#0c0617"
+    // "sideBar.background": "#2c2c2d",
+    // "list.activeSelectionBackground": "#231739",
+    // "list.inactiveSelectionBackground": "#231739",
+    // "list.focusBackground": "#231739",
+    // "list.hoverBackground": "#231739",
+    // "terminalCursor.foreground": "#C45DFF"
+  },
+
+  "window.titleBarStyle": "custom",
+  "apc.electron": {
+    "titleBarStyle": "hidden"
+  },
+  "apc.menubar.compact": true,
+  "apc.activityBar": {
+    "position": "top",
+    "size": 40,
+    "itemSize": 38,
+    "itemMargin": 20
+  },
+  "apc.sidebar.titlebar": {
+    "height": 30,
+    "fontSize": 13
+  },
+
+  "apc.listRow": {
+    "lists": ["explorer-folders-view", "quick-input-list", "results"],
+    "height": 30,
+    "fontSize": 14
+  },
+  "apc.stylesheet": {
+    ".title-actions": "display: none !important",
+    ".quick-input-widget.show-file-icon, .editor-widget.find-widget": "box-shadow: none !important",
+    ".filematch .monaco-icon-label:before, .custom-list-row.result .monaco-list-row .monaco-icon-label:before": "background-position : 0 bottom !important",
+    ".filematch .monaco-count-badge": "padding: 5px 6px 0 6px !important",
+    ".sidebar .title-label": "padding: 0 !important",
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
+    ".sidebar": "border: none !important",
+    ".monaco-editor .cursors-layer .cursor": "background-image : linear-gradient(135deg, #67D0FF 10%, #C45DFF 100%)",
+    "quick-input-list-row div": "display : flex !important; align-items: center !important"
+  },
+  "editor.matchBrackets": "never",
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "expand",
+  "editor.padding.bottom": 5,
+  "editor.codeLensFontSize": 18,
+  "editor.codeLensFontFamily": "JetBrains Mono",
+  "editor.inlayHints.fontFamily": "JetBrains Mono",
+  "editor.suggestFontSize": 18,
+  "editor.wordWrap": "on",
+  "debug.console.fontFamily": "JetBrains Mono",
+  "debug.console.fontSize": 18,
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "notebook.output.fontFamily": "JetBrains Mono",
+  "chat.editor.fontFamily": "JetBrains Mono",
+  "gitlens.blame.fontFamily": "JetBrains Mono",
+  "terminal.integrated.lineHeight": 2,
+  "debug.console.lineHeight": 1,
+  "editor.inlayHints.padding": true,
+  "workbench.editor.showTabs": "single",
+  "editor.lineHeight": 2.5,
+  "notebook.output.lineHeight": 2,
+  "chat.editor.lineHeight": 1,
+
+  "liveServer.settings.donotVerifyTags": true,
+  "editor.stickyScroll.enabled": false,
+  "workbench.statusBar.visible": false,
+  "symbols.hidesExplorerArrows": true,
+  "workbench.colorTheme": "Aura Dark",
+  "notebook.output.wordWrap": true,
+  "window.zoomLevel": -1,
+  "terminal.integrated.env.linux": {},
+  "console-ninja.featureSet": "Community",
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "material-icon-theme.folders.theme": "specific",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.userWords": [
+    "addenquiry",
+    "Adnan",
+    "biriyani",
+    "dotenv",
+    "fastapi",
+    "idurar",
+    "Muhammed",
+    "poratta",
+    "pydantic",
+    "sessionmaker",
+    "sqlalchemy",
+    "talename",
+    "templating",
+    "uvicorn"
+  ],
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": null
+  },
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "workbench.settings.openDefaultKeybindings": true,
+
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // NICE TO HAVE
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    }
+  ],
+  "vim.visualModeKeyBindin,gs": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
