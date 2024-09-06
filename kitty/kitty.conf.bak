@@ -1,0 +1,95 @@
+# Fonts
+scrolling_marquee=true
+font_family FiraCode Nerd Font
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+font_size        20
+
+# Winow appearance
+background_opacity 0.989
+enable_wayland  true
+
+# Hide the title bar for a minimal look
+hide_window_decorations yes
+
+# Padding
+window_padding_width 1 5 1 5
+
+# Cursor
+cursor_shape block
+cursor_blink  on
+
+# Scrollback buffer
+scrollback_lines 10000
+
+# Colors
+# foreground   #d0d0d0
+# background   #1e1e1e
+# selection_background   #3a3d41
+# selection_foreground   #d0d0d0
+# cursor_color #c5c5c5
+# active_border_color #5e81ac
+# inactive_border_color #2e3440
+
+# Custom Color Theme
+# background #1e1f28
+# foreground #f8f8f2
+# cursor #bbbbbb
+# selection_background #44475a
+# color0 #000000
+# color8 #545454
+# color1 #ff5555
+# color9 #ff5454
+# color2 #50fa7b
+# color10 #50fa7b
+# color3 #f0fa8b
+# color11 #f0fa8b
+# color4 #bd92f8
+# color12 #bd92f8
+# color5 #ff78c5
+# color13 #ff78c5
+# color6 #8ae9fc
+# color14 #8ae9fc
+# color7 #bbbbbb
+# color15 #ffffff
+# selection_foreground #1e1f28
+
+
+
+
+# URL Handling
+detect_urls yes
+open_url_with your_browser_command
+
+# Disable bell
+enable_audio_bell no
+visual_bell      no
+
+# Disable ligatures for simplicity
+enable_ligatures  false
+
+# Keyboard shortcuts
+map ctrl+shift+t new_tab
+map ctrl+shift+w close_window
+
+# Kitty-specific features
+# Allow resizing text with Ctrl+Plus and Ctrl+Minus
+font_size_increment 1.0
+map ctrl+shift+equal increase_font_size
+map ctrl+shift+minus decrease_font_size
+map ctrl+shift+0 reset_font_size
+
+# Smooth scrolling
+scrollback_pager_line_up   ctrl+shift+up
+scrollback_pager_line_down ctrl+shift+down
+
+# Config reload without restarting Kitty
+map ctrl+shift+r config-reload
+
+
+
+# BEGIN_KITTY_THEME
+# Base2Tone Field Dark
+include current-theme.conf
+# END_KITTY_THEME
