@@ -9,11 +9,14 @@ require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'nvim-treesitter/nvim-treesitter'
   use 'windwp/nvim-autopairs'
-  use 'rebelot/kanagawa.nvim'
+  use 'tiagovla/tokyodark.nvim'
+  use 'vim-airline/vim-airline'  
+  use 'vim-airline/vim-airline-themes'
 end)
 
 -- LSP setup
 local lspconfig = require'lspconfig'
+
 
 lspconfig.pyright.setup{}
 lspconfig.dockerls.setup{}
@@ -66,7 +69,6 @@ vim.g.netrw_altv = 1
 
 
 
-
 -- Treesitter setup (for better syntax highlighting)
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {"python", "javascript", "html", "css", "markdown"},
@@ -82,9 +84,20 @@ vim.opt.linespace = 2
 
 -- Set line numbers
 vim.wo.number = true
+vim.o.showmode = false
+vim.opt.laststatus = 3
+
+
 
 -- Apply Kanagawa theme
-vim.cmd[[colorscheme kanagawa]]
+vim.cmd[[colorscheme tokyodark]]
+
+-- Airline configuration
+vim.g['airline#extensions#tabline#enabled'] = 1
+vim.g['airline_powerline_fonts'] = 1
+vim.g.airline_theme = 'minimalist'
+
+
 
 function ToggleNetrw()
   local bufnr = vim.fn.bufnr('%')
