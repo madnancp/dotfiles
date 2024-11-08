@@ -56,6 +56,11 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
+
+-- visual mode keys
+vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -280,11 +285,15 @@ require("lazy").setup({
 				--  All the info you're looking for is in `:help telescope.setup()`
 				--
 				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
+				-- 	mappings = {
+				-- 	  i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+				-- 	},
 				-- },
-				-- pickers = {}
+				pickers = {
+					find_files = {
+						hidden = true,
+					},
+				},
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
@@ -734,7 +743,54 @@ require("lazy").setup({
 		"aliqyan-21/darkvoid.nvim",
 		config = function()
 			require("darkvoid").setup({
-				transparent = true, -- Enable transparency
+				transparent = false, -- Enable transparency
+
+				colors = {
+					fg = "#c0c0c0",
+					bg = "#1c1c1c",
+					cursor = "#1bfd9c",
+					line_nr = "#404040",
+					visual = "#303030",
+					comment = "#585858",
+					string = "#ffffff",
+					func = "#eaec75",
+					kw = "#1bfd9c",
+					identifier = "#7586c3",
+					type = "#7586c3",
+					search_highlight = "#1bfd9c",
+					operator = "#1bfd9c",
+					bracket = "#f0f250",
+					preprocessor = "#ffffff",
+					bool = "#66b2b2",
+					constant = "#b2d8d8",
+
+					-- gitsigns colors
+					added = "#baffc9",
+					changed = "#ffffba",
+					removed = "#ffb3ba",
+
+					-- Pmenu colors
+					pmenu_bg = "#1c1c1c",
+					pmenu_sel_bg = "#1bfd9c",
+					pmenu_fg = "#c0c0c0",
+
+					-- EndOfBuffer color
+					eob = "#3c3c3c",
+
+					-- Telescope specific colors
+					border = "#585858",
+					title = "#bdfe58",
+
+					-- bufferline specific colors
+					-- change this to change the colors of current or selected tab
+					bufferline_selection = "#bdfe58",
+
+					-- LSP diagnostics colors
+					error = "#dea6a0",
+					warning = "#D0B8A8",
+					hint = "#BEDC74",
+					info = "#7FA1C3",
+				},
 			})
 			vim.cmd("colorscheme darkvoid") -- Set the colorscheme
 		end,
@@ -843,7 +899,7 @@ require("lazy").setup({
 	--
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-	-- { import = 'custom.plugins' },
+	{ import = "custom.plugins" },
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
