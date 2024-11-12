@@ -109,14 +109,38 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="lsd"
+alias nv="nvim"
+alias sysboost="sudo dnf update && dnf upgrade"
+alias fn='find . -type f \
+! -path "*/env/*" \
+! -path "*/.venv/*" \
+! -path "*/.git/*" \
+! -path "*/__pycache__/*" \
+! -path "*/.tox/*" \
+! -path "*/.ipynb_checkpoints/*" \
+! -path "*/node_modules/*" \
+! -path "*/.coverage/*" \
+! -path "*/*.egg-info/*" \
+! -path "*/*.pyc" | fzf | xargs nvim' 
+
+rgf() {
+  rg "$1" --glob "!*/env/*" \
+           --glob "!*/.venv/*" \
+           --glob "!*/.git/*" \
+           --glob "!*/__pycache__/*" \
+           --glob "!*/.tox/*" \
+           --glob "!*/.nox/*" \
+           --glob "!*/.coverage/*" \
+           --glob "!*/*.egg-info/*" \
+           --glob "!*/*.pyc"
+}
+
+
+
 export PATH=$PATH:/usr/share/autojump
 [[ -s /home/adnan/.autojump/etc/profile.d/autojump.sh ]] && source /home/adnan/.autojump/etc/profile.d/autojump.sh
 
 
 PATH=~/.console-ninja/.bin:$PATH
 export PATH="/home/adnan/.local/bin:$PATH"
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
