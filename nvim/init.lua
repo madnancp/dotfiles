@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 
@@ -743,7 +744,7 @@ require("lazy").setup({
 		"aliqyan-21/darkvoid.nvim",
 		config = function()
 			require("darkvoid").setup({
-				transparent = false, -- Enable transparency
+				transparent = true, -- Enable transparency
 
 				colors = {
 					fg = "#c0c0c0",
