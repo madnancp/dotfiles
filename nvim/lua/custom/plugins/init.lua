@@ -19,4 +19,13 @@ return {
 		end,
 		requires = { "nvim-tree/nvim-web-devicons" }, -- Optional, for file icons
 	},
+	--
+	-- Add nvim-surround plugin
+	{
+		"kylechui/nvim-surround",
+		version = "*", -- Use the latest stable release
+		config = function()
+			require("nvim-surround").setup({})
+		end,
+	},
 }
