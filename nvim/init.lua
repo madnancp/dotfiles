@@ -7,6 +7,7 @@ vim.opt.mouse = "a"
 vim.opt.cmdheight = 0
 vim.opt.list = false
 vim.opt.termguicolors = true
+vim.api.nvim_set_hl(0, "@constructor", { fg = "#c71031" })
 
 -- Set transparent background
 vim.cmd("hi Normal guibg=none guifg=#ffffff") -- White text for Normal mode
@@ -724,64 +725,29 @@ require("lazy").setup({
 		end,
 	},
 
-	{ -- You can easily change to a different colorscheme.
-		-- Change the name of the colorscheme plugin below, and then
-		-- change the command in the config to whatever the name of that colorscheme is.
-		--
-		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+	{
 		"aliqyan-21/darkvoid.nvim",
 		config = function()
 			require("darkvoid").setup({
-				transparent = true, -- Enable transparency
+				transparent = true,
 
 				colors = {
-					fg = "#c0c0c0",
-					bg = "#1c1c1c",
-					cursor = "#1bfd9c",
-					line_nr = "#404040",
-					visual = "#303030",
-					comment = "#585858",
-					string = "#ffffff",
-					func = "#eaec75",
+					line_nr = "#a39e9e",
+					string = "#7e8082",
+					func = "#e6e0b8",
 					kw = "#1bfd9c",
-					identifier = "#7586c3",
-					type = "#7586c3",
-					search_highlight = "#1bfd9c",
-					operator = "#1bfd9c",
-					bracket = "#f0f250",
-					preprocessor = "#ffffff",
-					bool = "#66b2b2",
-					constant = "#b2d8d8",
-
-					-- gitsigns colors
-					added = "#baffc9",
-					changed = "#ffffba",
-					removed = "#ffb3ba",
-
-					-- Pmenu colors
-					pmenu_bg = "#1c1c1c",
-					pmenu_sel_bg = "#1bfd9c",
-					pmenu_fg = "#c0c0c0",
-
-					-- EndOfBuffer color
-					eob = "#3c3c3c",
-
-					-- Telescope specific colors
-					border = "#585858",
-					title = "#bdfe58",
-
-					-- bufferline specific colors
-					-- change this to change the colors of current or selected tab
-					bufferline_selection = "#bdfe58",
-
-					-- LSP diagnostics colors
-					error = "#dea6a0",
-					warning = "#D0B8A8",
-					hint = "#BEDC74",
-					info = "#7FA1C3",
+					identifier = "#ffffff",
+					type = "#9a9b9c",
+					type_builtin = "#5e5f61",
+					search_highlight = "#ffffff",
+					bracket = "#1bfd9c",
+					preprocessor = "#ba0d4a",
+					bool = "#b8b4ae",
+					constant = "#cccaca",
 				},
 			})
-			vim.cmd("colorscheme darkvoid") -- Set the colorscheme
+			vim.cmd("colorscheme darkvoid")
+			vim.api.nvim_set_hl(0, "@constructor", { fg = "#e6e0b8" })
 		end,
 	},
 
