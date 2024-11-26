@@ -51,7 +51,7 @@ git_prompt() {
   local cb=$(git_current_branch)
   if [[ -n "$cb" ]]; then
     local repo_path=$(git_repo_path)
-    echo " %{$fg[white]%}git:$cb %{$fg[white]%}$(git_commit_id)%{$reset_color%}$(git_mode)$(git_dirty)"
+    echo " %{$fg[green]%} $cb %{$fg[white]%}$(git_commit_id)%{$reset_color%}$(git_mode)$(git_dirty)"
   fi
 }
 
@@ -62,9 +62,9 @@ PROMPT='
 ${VIRTUAL_ENV:+(${VIRTUAL_ENV:t}) }%~
 ${smiley}  '
 
+
 RPROMPT='%F{white} $(ruby_prompt_info)$(git_prompt)%{$reset_color%}'
 
 # Disable automatic virtualenv prompt change
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-
 
