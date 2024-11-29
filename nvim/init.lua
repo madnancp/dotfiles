@@ -732,22 +732,22 @@ require("lazy").setup({
 				transparent = true,
 
 				colors = {
-					line_nr = "#a39e9e",
-					string = "#7e8082",
-					func = "#e6e0b8",
+					line_nr = "#585b70",
+					string = "#ffffff",
+					func = "#fab387",
 					kw = "#1bfd9c",
-					identifier = "#ffffff",
-					type = "#9a9b9c",
-					type_builtin = "#5e5f61",
-					search_highlight = "#ffffff",
-					bracket = "#1bfd9c",
-					preprocessor = "#ba0d4a",
-					bool = "#b8b4ae",
-					constant = "#cccaca",
+					identifier = "#cdd6f4",
+					type = "#89b4fa",
+					type_builtin = "#b4befe",
+					search_highlight = "#f38ba8",
+					bracket = "#94e2d5",
+					preprocessor = "#f5c2e7",
+					bool = "#f9e2af",
+					constant = "#cba6f7",
 				},
 			})
 			vim.cmd("colorscheme darkvoid")
-			vim.api.nvim_set_hl(0, "@constructor", { fg = "#e6e0b8" })
+			vim.api.nvim_set_hl(0, "@constructor", { fg = "#fab387" }) -- Mocha peach for constructors
 		end,
 	},
 
