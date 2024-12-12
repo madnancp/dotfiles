@@ -1,19 +1,28 @@
 return {
-	"aliqyan-21/darkvoid.nvim",
+	"rose-pine/neovim",
+	name = "rose-pine",
 	config = function()
-		require("darkvoid").setup({
-			transparent = true,
+		require("rose-pine").setup({
+			variant = "main",
+			dark_variant = "main",
 
-			colors = {
-				string = "#ffffff",
-				func = "#fab387",
-				kw = "#1bfd9c",
-				identifier = "#cdd6f4",
-				search_highlight = "#f38ba8",
+			enable = {
+				terminal = true,
+				legacy_highlights = true,
+				migrations = true,
+			},
+
+			styles = {
+				bold = false,
+				italic = true,
+				transparency = true,
+			},
+
+			highlight_groups = {
+				Comment = { fg = "#363738" },
+				LineNr = { fg = "#cccfce" },
 			},
 		})
-		vim.cmd("colorscheme darkvoid")
-		vim.api.nvim_set_hl(0, "@constructor", { fg = "#fab387" })
+		vim.cmd("colorscheme rose-pine")
 	end,
 }
-
