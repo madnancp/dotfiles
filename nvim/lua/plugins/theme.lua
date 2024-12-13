@@ -1,28 +1,13 @@
 return {
-	"rose-pine/neovim",
-	name = "rose-pine",
+	"scottmckendry/cyberdream.nvim",
 	config = function()
-		require("rose-pine").setup({
-			variant = "main",
-			dark_variant = "main",
-
-			enable = {
-				terminal = true,
-				legacy_highlights = true,
-				migrations = true,
-			},
-
-			styles = {
-				bold = false,
-				italic = true,
-				transparency = true,
-			},
-
-			highlight_groups = {
-				Comment = { fg = "#363738" },
-				LineNr = { fg = "#cccfce" },
+		require("cyberdream").setup({
+			transparent = true,
+			italic_comments = true,
+			extensions = {
+				telescope = false,
 			},
 		})
-		vim.cmd("colorscheme rose-pine")
+		vim.cmd("colorscheme cyberdream")
 	end,
 }

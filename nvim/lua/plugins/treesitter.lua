@@ -22,5 +22,6 @@ return {
 			additional_vim_regex_highlighting = { "ruby" },
 		},
 		indent = { enable = false },
+		auto_tag = { enable = true },
 	},
 }

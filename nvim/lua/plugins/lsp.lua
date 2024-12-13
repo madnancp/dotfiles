@@ -81,6 +81,13 @@ return {
 					},
 				},
 			},
+			clangd = {
+				cmd = { "clangd", "--background-index" },
+				filetypes = { "c", "cpp", "objc", "objcpp" },
+				root_dir = function()
+					return vim.loop.cwd()
+				end,
+			},
 		}
 
 		require("mason").setup()
