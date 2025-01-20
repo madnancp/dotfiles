@@ -30,6 +30,9 @@ return {
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
+				python = { "black" },
+				html = { "prettier" },
+				javascript = { "prettier" },
 			},
 		},
 	},
@@ -39,13 +42,12 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {},
 	},
-
 	{
-		"echasnovski/mini.nvim",
+		"kylechui/nvim-surround",
+		version = "*",
+		event = "VeryLazy",
 		config = function()
-			require("mini.ai").setup({ n_lines = 500 })
-
-			require("mini.surround").setup()
+			require("nvim-surround").setup({})
 		end,
 	},
 }

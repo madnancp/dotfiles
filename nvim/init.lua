@@ -18,6 +18,7 @@ require("lazy").setup({
 	require("plugins.others"),
 	require("plugins.oil"),
 	require("plugins.lualine"),
+	require("plugins.emmet"),
 }, {
 	ui = {
 		icons = vim.g.have_nerd_font and {} or {

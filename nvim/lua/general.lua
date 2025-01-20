@@ -22,6 +22,5 @@ vim.opt.scrolloff = 10
 vim.opt.showmode = false
 
 vim.schedule(function()
-    vim.opt.clipboard = "unnamedplus"
+	vim.opt.clipboard = "unnamedplus"
 end)
-
