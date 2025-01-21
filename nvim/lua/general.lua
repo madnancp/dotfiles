@@ -20,7 +20,8 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = false
 vim.opt.scrolloff = 10
 vim.opt.showmode = false
-
+vim.opt.colorcolumn = "85"
 vim.schedule(function()
-	vim.opt.clipboard = "unnamedplus"
+    vim.opt.clipboard = "unnamedplus"
 end)
+
