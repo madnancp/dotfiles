@@ -5,11 +5,12 @@ set $mod Mod4
 exec --no-startup-id systemctl --user start pipewire
 exec --no-startup-id systemctl --user start pipewire-pulse
 exec --no-startup-id systemctl --user start wireplumber
+exec --no-startup-id i3-battery-popup
 
 # exec --no-startup-id picom --backend glx
 exec --no-startup-id sleep 1 && picom --backend glx
 
-exec_always feh --bg-scale ~/wallpapper/black-white-girl.png
+exec_always feh --bg-scale ~/wallpapper/shadow-bg.jpg
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -48,7 +49,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
