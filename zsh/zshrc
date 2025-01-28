@@ -1,6 +1,11 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="peepcode"
+# ZSH_THEME="peepcode"
+ZSH_THEME="robbyrussell"
+
+# to open neovim as text-editor
+export VISUAL=nvim
+export EDITOR=nvim
 
 
 plugins=(git sudo history encode64 copypath zsh-autosuggestions zsh-syntax-highlighting you-should-use)
@@ -8,8 +13,10 @@ plugins=(git sudo history encode64 copypath zsh-autosuggestions zsh-syntax-highl
 source $ZSH/oh-my-zsh.sh
 eval "$(fzf --zsh)"
 
+alias lg="lazygit"
 alias ls="lsd"
 alias nv="nvim"
+alias ts="tmux-session"
 alias fzf="fzf --preview='bat --color=always {}'"
 alias inv='find . -type f \
 ! -path "*/env/*" \
@@ -23,19 +30,6 @@ alias inv='find . -type f \
 ! -path "*/.coverage/*" \
 ! -path "*/*.egg-info/*" \
 ! -path "*/*.pyc" | fzf | xargs nvim' 
-
-rgf() {
-  rg "$1" --glob "!*/env/*" \
-           --glob "!*/.venv/*" \
-           --glob "!*/venv/*" \
-           --glob "!*/.git/*" \
-           --glob "!*/__pycache__/*" \
-           --glob "!*/.tox/*" \
-           --glob "!*/.nox/*" \
-           --glob "!*/.coverage/*" \
-           --glob "!*/*.egg-info/*" \
-           --glob "!*/*.pyc"
-}
 
 
 
