@@ -18,18 +18,25 @@ alias ls="lsd"
 alias nv="nvim"
 alias ts="tmux-session"
 alias fzf="fzf --preview='bat --color=always {}'"
-alias inv='find . -type f \
-! -path "*/env/*" \
-! -path "*/.venv/*" \
-! -path "*/venv/*" \
-! -path "*/.git/*" \
-! -path "*/__pycache__/*" \
-! -path "*/.tox/*" \
-! -path "*/.ipynb_checkpoints/*" \
-! -path "*/node_modules/*" \
-! -path "*/.coverage/*" \
-! -path "*/*.egg-info/*" \
-! -path "*/*.pyc" | fzf | xargs nvim' 
+inv() {
+  local dir="${1:-.}"
+  local file=$(find "$dir" -type f \
+    ! -path "*/env/*" \
+    ! -path "*/.venv/*" \
+    ! -path "*/venv/*" \
+    ! -path "*/.git/*" \
+    ! -path "*/__pycache__/*" \
+    ! -path "*/.tox/*" \
+    ! -path "*/.ipynb_checkpoints/*" \
+    ! -path "*/node_modules/*" \
+    ! -path "*/.coverage/*" \
+    ! -path "*/*.egg-info/*" \
+    ! -path "*/*.pyc" | fzf)
+
+  if [ -n "$file" ]; then
+    nvim "$file" -c "lcd %:p:h"
+  fi
+}
 
 
 
