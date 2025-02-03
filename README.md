@@ -5,8 +5,12 @@ This repo contains my personal configurations for various productive tools, mana
 ### ⚡ **One-Line Setup**
 > [!Warning]
 > Before running the command, inspect the code to ensure it fits your setup. Do not run blindly!
+
 ```bash
 git clone https://github.com/adnaen/dotfiles.git ~/dotfiles && cd ~/dotfiles && stow -v nvim tmux i3 polybar
+
+# This command sets up only nvim,i3, and polybar.
+# You can add more tools tmux, zsh, code by including their names in the `stow` command.
 ```
 
 ### 🔍 Post-Setup (Only for Scripts)
