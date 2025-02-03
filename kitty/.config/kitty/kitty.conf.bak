@@ -57,6 +57,6 @@ map ctrl+shift+r config-reload
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Batman
 include current-theme.conf
 # END_KITTY_THEME

@@ -4,8 +4,9 @@
   "terminal.integrated.fontSize": 18,
   "editor.mouseWheelZoom": true,
   "editor.minimap.enabled": false,
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "relative",
   "editor.fontFamily": "FiraCode Nerd Font",
+  "breadcrumbs.enabled": false,
   "workbench.tree.renderIndentGuides": "none",
   "files.insertFinalNewline": true,
   "extensions.ignoreRecommendations": true,
@@ -33,10 +34,9 @@
     // "list.inactiveSelectionBackground": "#231739",
     // "list.focusBackground": "#231739",
     // "list.hoverBackground": "#231739",
-    "terminalCursor.foreground": "#d7ae06"
+    "terminalCursor.foreground": "#f6f6f6"
   },
 
-  // "window.titleBarStyle": "custom",
   "apc.electron": {
     "frame": false,
     "transparent": true,
@@ -90,14 +90,15 @@
   "debug.console.lineHeight": 1,
   "editor.inlayHints.padding": true,
   "workbench.editor.showTabs": "single",
-  "editor.lineHeight": 2.3,
-  "notebook.output.lineHeight": 2,
+  "editor.lineHeight": 1.8,
+  "notebook.output.lineHeight": 1.5,
   "chat.editor.lineHeight": 1,
 
   "liveServer.settings.donotVerifyTags": true,
   "editor.stickyScroll.enabled": false,
   "workbench.statusBar.visible": false,
   "symbols.hidesExplorerArrows": true,
+  "material-icon-theme.hidesExplorerArrows": true,
   "notebook.output.wordWrap": true,
   "terminal.integrated.env.linux": {},
   "console-ninja.featureSet": "Community",
@@ -136,21 +137,25 @@
     "dotenv",
     "fastapi",
     "idurar",
+    "joblib",
     "Muhammed",
     "poratta",
     "pydantic",
+    "selectbox",
     "sessionmaker",
     "sqlalchemy",
+    "streamlit",
     "talename",
     "templating",
-    "uvicorn"
+    "uvicorn",
+    "vectorbt"
   ],
   "[css]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
 
   "[markdown]": {
-    "editor.defaultFormatter": null
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
   "editor.cursorSurroundingLines": 4,
   "workbench.settings.openDefaultKeybindings": true,
@@ -195,10 +200,6 @@
       "before": ["]", "d"],
       "commands": ["editor.action.marker.next"]
     },
-    {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"]
-    },
     { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
     { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
     {
@@ -235,10 +236,8 @@
     }
   ],
   "vim.visualModeKeyBindings": [
-    // Stay in visual mode while indenting
-    { "before": [">"], "commands": ["editor.action.indentLines"] },
     { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-    // Move selected lines while staying in visual mode
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
     { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
   ],
@@ -269,12 +268,11 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "explorer.confirmDelete": false,
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   "window.menuBarVisibility": "toggle",
   "[dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Ayu Dark",
   "terminal.integrated.profiles.linux": {
     "bash": {
       "path": "bash",
@@ -307,5 +305,24 @@
     ""
   ],
   "workbench.activityBar.location": "hidden",
-  "workbench.iconTheme": "symbols"
+  "workbench.iconTheme": "material-icon-theme",
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.inlayHints.callArgumentNames": "all",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "python.defaultInterpreterPath": "/home/adnan/Documents/codes/data_Science/imdb_data_analysis/p_6/env",
+  "sqliteViewer.maxFileSize": 0,
+  "workbench.editor.enablePreview": false,
+  "workbench.colorTheme": "Kolada",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "terminal.integrated.cursorStyle": "line",
+  "update.showReleaseNotes": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
 }
