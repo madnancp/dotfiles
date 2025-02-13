@@ -20,6 +20,7 @@ require("lazy").setup({
 	require("plugins.lualine"),
 	require("plugins.emmet"),
 	require("plugins.harpoon"),
+	require("plugins.lazygit"),
 }, {
 	ui = {
 		icons = vim.g.have_nerd_font and {} or {
