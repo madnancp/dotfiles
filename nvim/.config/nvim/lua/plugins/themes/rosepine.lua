@@ -53,5 +53,11 @@ return {
 		})
 
 		vim.cmd("colorscheme rose-pine")
+		vim.cmd([[
+			hi Cursor guifg=NONE guibg=#ffffff
+			hi CursorLineNr guifg=#b0adac
+			hi LineNr guifg=#b0adac
+			hi ColorColumn guibg=#403f3e
+		]])
 	end,
 }

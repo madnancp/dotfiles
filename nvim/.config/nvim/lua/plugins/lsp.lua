@@ -88,6 +88,13 @@ return {
 					return vim.loop.cwd()
 				end,
 			},
+			html = {
+				cmd = { "vscode-html-language-server", "--stdio" },
+				filetypes = { "html" },
+				init_options = {
+					provideFormatter = false,
+				},
+			},
 		}
 
 		require("mason").setup()

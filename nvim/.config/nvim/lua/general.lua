@@ -24,3 +24,4 @@ vim.opt.colorcolumn = "80"
 vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
+vim.opt.guicursor = "n-v-i-c:block-Cursor"

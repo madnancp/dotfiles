@@ -17,8 +17,6 @@ require("lazy").setup({
 	require("plugins.which_key"),
 	require("plugins.others"),
 	require("plugins.oil"),
-	require("plugins.lualine"),
-	require("plugins.emmet"),
 	require("plugins.harpoon"),
 	require("plugins.lazygit"),
 }, {
