@@ -19,6 +19,7 @@ require("lazy").setup({
 	require("plugins.oil"),
 	require("plugins.harpoon"),
 	require("plugins.lazygit"),
+	require("plugins.markdown"),
 }, {
 	ui = {
 		icons = vim.g.have_nerd_font and {} or {
