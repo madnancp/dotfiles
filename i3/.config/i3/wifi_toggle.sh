@@ -9,4 +9,3 @@ else
     nmcli radio wifi on
     notify-send "Wi-Fi Enabled"
 fi
-
