@@ -22,6 +22,34 @@ return {
 				find_files = {
 					hidden = true,
 				},
+				find_command = {
+					"rg",
+					"--files",
+					"--hidden",
+					"--glob",
+					"!.git/*",
+					"--glob",
+					"!.venv/*",
+					"--glob",
+					"!node_modules/*",
+					"--glob",
+					"!__pycache__/*",
+				},
+				live_grep = {
+					additional_args = function()
+						return {
+							"--hidden",
+							"--glob",
+							"!.git/*",
+							"--glob",
+							"!.venv/*",
+							"--glob",
+							"!node_modules/*",
+							"--glob",
+							"!__pycache__/*",
+						}
+					end,
+				},
 			},
 			extensions = {
 				["ui-select"] = {
