@@ -20,4 +20,5 @@ require("lazy").setup({
 	require("plugins.lazygit"),
 	require("plugins.markdown"),
 	require("plugins.copilot"),
+	require("plugins.toggleterm"),
 })
