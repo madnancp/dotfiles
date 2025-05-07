@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Step 1: Select base category folder
+selected_category=$(find ~/work ~/projects ~/personal ~/personal/learnings/ -mindepth 0 -maxdepth 0 -type d | fzf --prompt="Select category: ")
+
+if [[ -z $selected_category ]]; then
+	echo "❌ No category selected."
+	exit 1
+fi
+
+echo "$selected_category"
+if [[ -d "$selected_category" ]]; then
+	cd "$selected_category" || {
+		echo "❌ Failed to cd into $selected_category"
+		exit 1
+	}
+else
+	echo "❌ Directory does not exist: $selected_category"
+	exit 1
+fi
+exec gh repo new
