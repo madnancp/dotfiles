@@ -95,6 +95,38 @@ return {
 					provideFormatter = false,
 				},
 			},
+			tailwindcss = {
+				cmd = { "tailwindcss-language-server", "--stdio" },
+				filetypes = {
+					"html",
+					"css",
+					"scss",
+					"javascript",
+					"javascriptreact",
+					"typescript",
+					"typescriptreact",
+				},
+				root_dir = require("lspconfig.util").root_pattern(
+					"tailwind.config.js",
+					"tailwind.config.ts",
+					"postcss.config.js",
+					"package.json",
+					".git"
+				),
+				settings = {
+					tailwindCSS = {
+						experimental = {
+							classRegex = {
+								"tw`([^`]*)",
+								'tw="([^"]*)',
+								"tw\\(([^)]*)\\)",
+								'className="([^"]*)"',
+								'class="([^"]*)"',
+							},
+						},
+					},
+				},
+			},
 		}
 
 		require("mason").setup()
