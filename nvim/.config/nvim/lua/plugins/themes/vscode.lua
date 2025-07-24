@@ -26,7 +26,6 @@ return {
       hi StatusLine     guibg=NONE ctermbg=NONE
       hi StatusLineNC   guibg=NONE ctermbg=NONE
       hi WinSeparator   guibg=NONE ctermbg=NONE
-      hi ColorColumn    guibg=NONE ctermbg=NONE
       hi CursorLine     guibg=NONE ctermbg=NONE
       hi Pmenu          guibg=NONE ctermbg=NONE
       hi PmenuSel       guibg=NONE ctermbg=NONE

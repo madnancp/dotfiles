@@ -1,14 +1,12 @@
 return {
-	"marko-cerovac/material.nvim",
+	"scottmckendry/cyberdream.nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
 		-- First, enable true color
 		vim.o.termguicolors = true
 
-		vim.g.material_style = "deep ocean"
-
-		require("material").setup({
+		require("cyberdream").setup({
 			contrast = {
 				terminal = false,
 				sidebars = false,
@@ -44,7 +42,7 @@ return {
 			},
 		})
 
-		vim.cmd("colorscheme material")
+		vim.cmd("colorscheme cyberdream")
 
 		vim.cmd([[
       hi Normal         guibg=NONE ctermbg=NONE
