@@ -12,7 +12,7 @@ require("lazy").setup({
 	require("plugins.telescope"),
 	require("plugins.coding"),
 	require("plugins.lint"),
-	require("plugins.themes.cybersdream"),
+	require("plugins.themes.rosepine"),
 	require("plugins.core"),
 	require("plugins.treesitter"),
 	require("plugins.others"),
@@ -22,4 +22,5 @@ require("lazy").setup({
 	require("plugins.markdown"),
 	-- require("plugins.copilot"),
 	require("plugins.toggleterm"),
+	require("plugins.git_blame"),
 })
