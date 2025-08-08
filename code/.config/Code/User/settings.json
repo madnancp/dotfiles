@@ -1,6 +1,5 @@
 {
   "editor.fontSize": 18,
-  "files.autoSave": "afterDelay",
   "terminal.integrated.fontSize": 18,
   "editor.mouseWheelZoom": true,
   "editor.minimap.enabled": false,
