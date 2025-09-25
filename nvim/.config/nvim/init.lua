@@ -12,7 +12,7 @@ require("lazy").setup({
 	require("plugins.telescope"),
 	require("plugins.coding"),
 	require("plugins.lint"),
-	require("plugins.themes.gruvbox"),
+	require("plugins.themes.poimandres"),
 	require("plugins.core"),
 	require("plugins.treesitter"),
 	require("plugins.others"),
