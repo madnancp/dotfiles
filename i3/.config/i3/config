@@ -1,5 +1,7 @@
 
 set $mod Mod4
+exec_always --no-startup-id sleep 1 && ~/.config/polybar/lunch.sh
+exec_always --no-startup-id ~/.config/i3/battery-watch.sh &
 # exec --no-startup-id pulseaudio --start
 
 exec --no-startup-id systemctl --user start pipewire
@@ -10,7 +12,7 @@ exec --no-startup-id i3-battery-popup
 # exec --no-startup-id picom --backend glx
 exec --no-startup-id sleep 1 && picom --backend glx
 
-exec_always feh --bg-scale ~/wallpappers/b-395.jpg
+exec_always feh --bg-scale ~/wallpappers/red-tattoo-girl.jpg
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -33,7 +35,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 2%- && $ref
 
 
 # screen shot
-bindsym Print exec --no-startup-id sh -c 'NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/Pictures/screenshots/screenshot_$NOW.png'
+bindsym Print exec --no-startup-id flameshot gui --clipboard --pin --path ~/Pictures/screenshots/
 
 
 floating_modifier $mod
@@ -159,12 +161,8 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-bar {
-    status_command i3status
-    tray_output primary
-    font pango:monospace 22px
-}
-
 # custome keys
+bindsym $mod+b exec brave-browser
+bindsym $mod+Shift+b exec brave-browser --incognito
+bindsym $mod+o exec flatpak run md.obsidian.Obsidian
 bindsym $mod+Shift+period exec systemctl suspend
