@@ -21,19 +21,19 @@ return {
 			pickers = {
 				find_files = {
 					hidden = true,
-				},
-				find_command = {
-					"rg",
-					"--files",
-					"--hidden",
-					"--glob",
-					"!.git/*",
-					"--glob",
-					"!.venv/*",
-					"--glob",
-					"!node_modules/*",
-					"--glob",
-					"!__pycache__/*",
+					find_command = {
+						"rg",
+						"--files",
+						"--hidden",
+						"--glob",
+						"!.git/*",
+						"--glob",
+						"!.venv/*",
+						"--glob",
+						"!node_modules/*",
+						"--glob",
+						"!__pycache__/*",
+					},
 				},
 				live_grep = {
 					additional_args = function()
