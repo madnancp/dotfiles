@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Step 1: Select base category folder
-selected_category=$(find ~/work ~/projects ~/personal ~/personal/learnings/ -mindepth 0 -maxdepth 0 -type d | fzf --prompt="Select category: ")
+selected_category=$(find ~/Coding/work/* ~/Coding/personal ~/Coding/personal/learnings/ -mindepth 0 -maxdepth 0 -type d | fzf --prompt="Select category: ")
 
 if [[ -z $selected_category ]]; then
 	echo "❌ No category selected."
