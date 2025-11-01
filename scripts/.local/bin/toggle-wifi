@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if [ "$(nmcli radio wifi)" = "enabled" ]; then
-	nmcli radio wifi off
-	notify-send "󰖪 Wifi" "Wifi Disabled" --urgency critical
+    nmcli radio wifi off
+    notify-send -i network-error "Wi-Fi Disabled"
 else
-	nmcli radio wifi on
-	notify-send " Wifi" "Wifi Enabled"
+    nmcli radio wifi on
+    notify-send -i network-wireless "Wi-Fi Enabled"
 fi
