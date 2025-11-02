@@ -1,28 +1,19 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar at the bottom of your screen
-    "height": 20, // Waybar height
-    // "width": 1366, // Waybar width
+    "layer": "top",
+    "position": "top",
+    "height": 20,
     "modules-left": ["hyprland/workspaces", "hyprland/mode"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": false,
-        "format": "{name} {icon}",
-        "format-icons": {
-	    "1:code": "",
-            "2:web": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
+    "hyprland/window": {
+	    "format": "{}",
+	    "max-length": 50,
+	    "tooltip": true
     },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
@@ -37,16 +28,14 @@
         "format": "{}% "
     },
     "battery": {
-        "bat": "BAT0",
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+	    "bat": "BAT0",
+	    "states": {
+		    "warning": 30,
+		    "critical": 15
+	    },
+	    "format": "{capacity}% {icon}",
+	    "format-charging": "{capacity}%⚡",
+	    "format-icons": [ "󰁺", "󰁼", "󰁾", "󰂀", "󰁹" ]
     },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface

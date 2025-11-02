@@ -15,22 +15,25 @@ window#waybar {
     font-weight: bold;
     font-family: "JetBrains";
 }
-/*
-#workspaces {
-    padding: 0 5px;
-}
-*/
 
-#workspaces button {
-    padding: 0 5px;
-    background: transparent;
-    color: white;
-    border-top: 2px solid transparent;
+#workspaces {
+    padding: 0px;
 }
 
 #workspaces button.focused {
+    background-color: rgba(0, 0, 0, 0.3);
     color: #c9545d;
     border-top: 2px solid #c9545d;
+}
+
+#workspaces button.active {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #c9545d;
+    border-top: 2px solid #c9545d;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
 }
 
 #mode {
@@ -38,7 +41,15 @@ window#waybar {
     border-bottom: 3px solid white;
 }
 
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#custom-spotify,
+#tray,
+#mode {
     padding: 0 0px;
     margin: 0 15px;
 }
@@ -47,54 +58,61 @@ window#waybar {
     font-weight: bold;
 }
 
-#battery {
-}
+#battery {}
 
 #battery icon {
     color: red;
+    padding: 0 10px;
 }
 
-#battery.charging {
+#battery.charging,
+#battery.charging * {
+    color: #00ff7f;
+    font-weight: bold;
+    animation: pulse 1.5s ease-in-out infinite;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: black;
+        color: #FF3333;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 4px #00ff7f, 0 0 8px #00ff7f;
+    }
+
+    50% {
+        text-shadow: 0 0 8px #00ff7f, 0 0 16px #00ff7f;
+    }
+
+    100% {
+        text-shadow: 0 0 4px #00ff7f, 0 0 8px #00ff7f;
     }
 }
 
 #battery.warning:not(.charging) {
     color: white;
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 0.9s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
-#cpu {
-}
+#cpu {}
 
-#memory {
-}
+#memory {}
 
-#network {
-}
+#network {}
 
 #network.disconnected {
-    background: #f53c3c;
+    color: #FF3333;
 }
 
-#pulseaudio {
-}
+#pulseaudio {}
 
-#pulseaudio.muted {
-}
+#pulseaudio.muted {}
 
-#custom-spotify {
-    color: rgb(102, 220, 105);
-}
-
-#tray {
-}
+#tray {}
