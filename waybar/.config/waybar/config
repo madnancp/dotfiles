@@ -38,7 +38,7 @@
 	    "format-icons": [ "󰁺", "󰁼", "󰁾", "󰂀", "󰁹" ]
     },
     "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        // "interface": "wlp2s0",
         "format-wifi": "{essid} ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-disconnected": "Disconnected ⚠"

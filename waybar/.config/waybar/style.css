@@ -22,14 +22,12 @@ window#waybar {
 
 #workspaces button.focused {
     background-color: rgba(0, 0, 0, 0.3);
-    color: #c9545d;
-    border-top: 2px solid #c9545d;
+    color: white;
 }
 
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
-    color: #c9545d;
-    border-top: 2px solid #c9545d;
+    color: white;
 }
 
 #workspaces button.urgent {
