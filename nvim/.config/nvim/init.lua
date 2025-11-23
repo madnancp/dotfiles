@@ -20,7 +20,7 @@ require("lazy").setup({
 	require("plugins.harpoon"),
 	require("plugins.lazygit"),
 	require("plugins.markdown"),
-	-- require("plugins.copilot"),
+	require("plugins.codeium"),
 	require("plugins.toggleterm"),
 	require("plugins.git_blame"),
 })
