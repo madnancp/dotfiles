@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+journal_path="$HOME/life/journals/"
+dt=$(date +"%a-%Y-%m-%d")
+
+new_file_path="$journal_path/$dt.md"
+
+if [ -f "$new_file_path" ]; then
+	nvim "$new_file_path"
+else
+	mkdir -p "$journal_path"
+	cat > "$new_file_path" <<- EOM
+	# $dt
+	
+	## Wins
+
+	- 
+
+	## Thougts
+
+	- 
+
+	## Plan
+
+	-
+	EOM
+
+	nvim "$new_file_path"
+fi
