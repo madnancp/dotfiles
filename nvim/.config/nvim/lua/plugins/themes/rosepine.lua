@@ -50,12 +50,16 @@ return {
 				h5 = "pine",
 				h6 = "foam",
 			},
+			highlight_groups = {
+				LineNr = { fg = "#737272", inherit = false },
+				CursorLineNr = { fg = "#FFFFFF", bg = "none", bold = true, inherit = false },
+				CursorLine = { bg = "none", inherit = false },
+				ColorColumn = { bg = "#5a5959", inherit = false },
+				Cursor = { fg = "#FFFFFF", bg = "#FFFFFF", inherit = false },
+				StatusLine = { fg = "#FFFFFF", inherit = false },
+			},
 		})
 
 		vim.cmd("colorscheme rose-pine")
-		vim.cmd([[
-			hi Cursor guifg=NONE guibg=#ffffff
-			hi CursorLineNr	guibg=NONE ctermbg=NONE guifg=#FFFFFF
-		]])
 	end,
 }
