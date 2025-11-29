@@ -25,7 +25,7 @@ return {
 			custom_highlights = function(colors)
 				return {
 					CursorLine = { bg = "#CCCCCC" },
-					CursorLineNr = { fg = "#CCCCCC", bg = "NONE", bold = true },
+					CursorLineNr = { fg = "#FFFFFF", bg = "none", bold = true },
 					LineNr = { fg = colors.editor.line_numbers, bg = "NONE" },
 					WinSeparator = { fg = colors.editor.line_numbers, bg = "NONE" },
 					NormalFloat = { bg = "NONE" },
