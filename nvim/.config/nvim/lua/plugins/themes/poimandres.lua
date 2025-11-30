@@ -13,12 +13,11 @@ return {
 		vim.cmd("colorscheme poimandres")
 
 		vim.cmd([[
-		hi LspReferenceText  guibg=NONE guifg=NONE
-		hi LspReferenceRead  guibg=NONE guifg=NONE
-		hi LspReferenceWrite guibg=NONE guifg=NONE
 		hi Visual guibg=#2a2a2a guifg=NONE gui=NONE
-		hi YankHighlight guibg=#ffffff guifg=#000000 gui=NONE
 		hi ColorColumn guibg=#202020 ctermbg=236
+		hi CursorLine   guibg=NONE ctermbg=NONE
+		hi StatusLine  guibg=NONE, guifg=#FFFFFF
+		hi Cursor  guifg=NONE, guibg=#00d992
 		]])
 	end,
 }
