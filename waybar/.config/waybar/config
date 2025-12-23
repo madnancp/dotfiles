@@ -2,9 +2,19 @@
     "layer": "top",
     "position": "top",
     "height": 20,
-    "modules-left": ["hyprland/workspaces", "hyprland/mode"],
-    "modules-center": ["hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/window"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
+    "hyprland/workspaces": {
+	    "disable-scroll": true,
+	    "all-outputs": true,
+	    "on-click": "activate",
+	    "format": "{icon}",
+	    "format-icons": {
+		    "1": "  Code",
+		    "2": "  Brave",
+		    "3": "  Search",
+	    }
+    },
     "hyprland/window": {
 	    "format": "{}",
 	    "max-length": 50,
