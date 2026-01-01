@@ -18,10 +18,11 @@ export EDITOR=nvim
 # plugins=(git sudo history encode64 copypath zsh-autosuggestions zsh-syntax-highlighting you-should-use)
 plugins=(git sudo history encode64 copypath zsh-autosuggestions you-should-use)
 
-source $ZSH/oh-my-zsh.sh
 eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
 
 alias lg="lazygit"
+alias jr="~/dotfiles/scripts/.local/bin/life-journal"
 alias nv="nvim"
 alias ts="tmux-session"
 alias fzf="fzf --preview='bat --color=always {}'"
