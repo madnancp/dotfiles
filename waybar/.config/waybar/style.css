@@ -1,3 +1,5 @@
+@import url("./colors.css");
+
 * {
     border: none;
     border-radius: 0;
@@ -11,52 +13,33 @@ window#waybar {
     color: white;
 }
 
-#window {
-    font-weight: bold;
-    font-family: "JetBrains";
-}
-
 #workspaces {
     padding: 0px;
 }
 
-#workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
+#workspaces button {
+    background: @background;
+    color: @foreground;
 }
 
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background-image: linear-gradient(0deg, @selection, @background-darker);
+}
+
+#workspaces button.focused,
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-image: linear-gradient(0deg, @purple, @selection);
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-image: linear-gradient(0deg, @red, @background-darker);
 }
 
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+#taskbar button.active {
+    background-image: linear-gradient(0deg, @selection, @background-darker);
 }
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#network,
-#pulseaudio,
-#custom-spotify,
-#tray,
-#mode {
-    padding: 0 0px;
-    margin: 0 15px;
-}
-
-#clock {
-    font-weight: bold;
-}
-
-#battery {}
 
 #battery icon {
     color: red;
@@ -99,18 +82,20 @@ window#waybar {
     animation-direction: alternate;
 }
 
-#cpu {}
-
-#memory {}
-
-#network {}
-
-#network.disconnected {
-    color: #FF3333;
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#custom-spotify,
+#tray,
+#mode {
+    padding: 0 0px;
+    margin: 0 15px;
 }
 
-#pulseaudio {}
-
-#pulseaudio.muted {}
-
-#tray {}
+#clock {
+    padding: 0 4px;
+    background: @background;
+}
