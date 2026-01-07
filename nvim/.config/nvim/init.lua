@@ -23,4 +23,5 @@ require("lazy").setup({
 	require("plugins.codeium"),
 	require("plugins.toggleterm"),
 	require("plugins.git_blame"),
+	require("plugins.indent-blankline"),
 })
