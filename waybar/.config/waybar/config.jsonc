@@ -4,7 +4,7 @@
     "height": 20,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "battery", "clock", "tray" ],
+    "modules-right": ["pulseaudio", "network", "bluetooth", "battery", "clock", "tray" ],
     "hyprland/workspaces": {
 	"disable-scroll": true,
 	"all-outputs": true,
@@ -27,10 +27,18 @@
     },
     "network": {
 	// "interface": "wlp2s0",
-	"format-wifi": "{essid} ",
+	"format-wifi": "{essid} 󰖩",
 	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-	"format-disconnected": "Disconnected ⚠"
+	"format-disconnected": "󱚵",
 	"format-disabled": "󰖪",
+    },
+    "bluetooth": {
+	"format": "󰂯",
+	"format-disabled": "󰂲",
+	"format-connected": "{device_alias} 󰂱",
+	"format-connected-battery": "{device_alias} 󰂱",
+	"tooltip-format": "{controller_alias}",
+	"tooltip-format-connected": "{device_alias}\n{device_address}\n󰥈 {device_battery_percentage}%",
     },
     "battery": {
 	"bat": "BAT0",
