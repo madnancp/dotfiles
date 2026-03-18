@@ -1,7 +1,7 @@
 @import "mocha.css";
 
 * {
-    font-family: JetBrains Mono;
+    font-family: JetBrainsMono Nerd Font;
     font-size: 15px;
     min-height: 0;
 }
@@ -12,6 +12,11 @@
     margin: 5px 5px;
 }
 
+
+#window {
+    color: grey;
+}
+
 #workspaces {
     border-radius: 0.5rem;
     margin: 5px;
@@ -20,13 +25,13 @@
 }
 
 #workspaces button {
-    color: @lavender;
+    color: gray;
     border-radius: 1rem;
     padding: 0.4rem;
 }
 
 #workspaces button.active {
-    color: @sky;
+    color: white;
     border-radius: 1rem;
 }
 
@@ -45,31 +50,32 @@
 #bluetooth,
 #custom-lock,
 #custom-power {
-    background-color: @surface0;
-    padding: 0.5rem 1rem;
-    margin: 5px 0;
+    background-color: black;
+    padding: 0.1rem 0.3rem;
+    margin: 0.5rem 1rem;
 }
 
 #clock {
-    color: @blue;
-    border-radius: 0px 1rem 1rem 0px;
+    color: white;
     margin-right: 1rem;
+    border-bottom: 1px solid white;
 }
 
 #battery {
-    color: @green;
+    color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-bottom: 1px solid white;
 }
 
-#battery.charging {
-    color: @green;
-}
-
-#battery.warning:not(.charging) {
+#battery.critical:not(.charging) {
     color: @red;
+    border-bottom: 1px solid @red;
 }
 
 #network {
-    color: @yellow;
+    color: white;
+    border-bottom: 1px solid white;
 }
 
 #network.disabled {
@@ -83,15 +89,11 @@
 }
 
 #pulseaudio {
-    color: @maroon;
-    border-radius: 1rem 0px 0px 1rem;
+    color: white;
+    border-bottom: 1px solid white;
     margin-left: 1rem;
+    margin-right: 1rem;
 }
-
-#bluetooth {
-    color: @lavender;
-}
-
 
 #tray {
     margin-right: 1rem;

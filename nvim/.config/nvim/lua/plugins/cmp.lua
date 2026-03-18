@@ -23,6 +23,17 @@ return {
 		luasnip.config.setup({})
 
 		cmp.setup({
+			window = {
+				completion = cmp.config.window.bordered({
+					max_height = 10, -- fixed max height
+					max_width = 60, -- fixed width
+					min_width = 60, -- prevents shrinking
+					winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+					scrollbar = true,
+				}),
+
+				documentation = false,
+			},
 			snippet = {
 				expand = function(args)
 					luasnip.lsp_expand(args.body)

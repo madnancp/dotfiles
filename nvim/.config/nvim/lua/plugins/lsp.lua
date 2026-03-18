@@ -17,6 +17,18 @@ return {
 					vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 				end
 
+				vim.diagnostic.config({
+					float = {
+						border = "rounded",
+						source = "always",
+						header = "",
+						prefix = "",
+						max_width = 80,
+						max_height = 20,
+					},
+					severity_sort = true,
+				})
+
 				map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
 
 				map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
@@ -49,7 +61,6 @@ return {
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 		local servers = {
-
 			lua_ls = {
 				settings = {
 					Lua = {
