@@ -1,7 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	"windwp/nvim-ts-autotag",
 	build = ":TSUpdate",
-	main = "nvim-treesitter.configs",
 	opts = {
 		ensure_installed = {
 			"bash",
@@ -23,4 +23,7 @@ return {
 		indent = { enable = false },
 		auto_tag = { enable = true },
 	},
+	config = function(_, opts)
+		require("nvim-treesitter.configs").setup(opts)
+	end,
 }

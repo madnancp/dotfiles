@@ -134,3 +134,4 @@ export NVM_DIR="$HOME/.config/nvm"
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+source /usr/share/nvm/init-nvm.sh
