@@ -47,8 +47,6 @@ ZSH_THEME="macos-zsh-theme/macos-theme"
 export VISUAL=nvim
 export EDITOR=nvim
 
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -80,6 +78,7 @@ eval "$(zoxide init zsh)"
 plugins=(git sudo history encode64 copypath zsh-autosuggestions zsh-you-should-use)
 
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
@@ -134,4 +133,6 @@ export NVM_DIR="$HOME/.config/nvm"
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
 source /usr/share/nvm/init-nvm.sh
